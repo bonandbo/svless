@@ -10,20 +10,20 @@ var mattermost = new Mattermost('w5qjea1yxpgd5cmg56c7tzg13r');
 
 app.use(bodyParser.json({ strict: false }));
 
-function replyMattermost(body, textRep) {
-  var responseOutgoing = {
-    text: textRep,
-    username: 'CojXuong'
-  };
-  return responseOutgoing;
-}
+// function replyMattermost(body, textRep) {
+//   var responseOutgoing = {
+//     text: textRep,
+//     username: 'CojXuong'
+//   };
+//   return responseOutgoing;
+// }
 
 app.post('/', function (req, res) {
   
   console.log(req);
 
-  var resRep = 'diep testdiep test';
-  var replyResult = 'diep test';
+  // var resRep = 'diep testdiep test';
+  // var replyResult = 'diep test';
 
   request.get({
       url: 'https://api.flickr.com/services/rest',
@@ -45,10 +45,7 @@ app.post('/', function (req, res) {
         console.log('body:', body); // Print the HTML for the Google homepage.
         
         var myObj = JSON.parse(body);
-        console.log('url: ', myObj.photos.photo[1].url_m);
-        //resRep = myObj.photos.photo[1].url_m;
-        //replyResult = replyMattermost(req.body, myObj.photos.photo[1].url_m);
-        console.log('22222222222');
+
         randomNumber = Math.floor((Math.random() * 9 ) + 1);
 
         var test1 = {
