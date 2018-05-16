@@ -31,7 +31,7 @@ app.post('/', function (req, res) {
         method: 'flickr.photos.search',
         api_key: 'a2f198d8d33710fa85c8e8df61ab6516',
         text: 'gai+xinh',
-        sort: 'interestingness-desc',
+        // sort: 'interestingness-desc',
         content_type: 1,
         extras: 'url_m',
         page: Math.floor((Math.random() * 10 ) + 1),
@@ -46,7 +46,7 @@ app.post('/', function (req, res) {
         
         var myObj = JSON.parse(body);
 
-        randomNumber = Math.floor((Math.random() * 9 ) + 1);
+        randomNumber = Math.floor((Math.random() * (myObj.photos.photo.length-1) ) + 1);
 
         var test1 = {
           response_type: "in_channel",
