@@ -3,6 +3,13 @@
         "channel_id": ['n65qn8ytrt88pq58xxm5b3dk3c'],
         "user_name": ['diep.trantuan']
     },
+    "black_list": {
+        "user": {
+            "name": "phuong.nguyenvan2",
+            "percentage": 33,
+            "text_return": " I will always be the newest one, and better one. My old one should be sacrifice for that."
+        }
+    },
     "search_object": {
         "vietnamese": ["gai+dep", "VietNamese Teen Girls", "gai+xinh", "girl+xinh"],
         "chinese": ["chinese beautiful girl", "chinese beautiful girl"],
@@ -13,12 +20,15 @@
         "print_log": true
     },
     "string": {
-
+        "help": "Use /gai viet to find vietnamese, use /gai tau to find chinese, use /gai tay to find tay",
+        "disable_param": "Current param has been disable because too many people use it to find unrelated to gai's picture. It's disgusting !!!"
     },
     "api": {
         "flickr": {
             "key": "a2f198d8d33710fa85c8e8df61ab6516",
-            "method": ['flickr.photos.search']
+            "method": ['flickr.photos.search'],
+            "url": "https://api.flickr.com/services/rest"
         }
-    }
+    },
+    "bot_name": "CojXuong"
 }

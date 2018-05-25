@@ -1,11 +1,20 @@
-const serverless = require('serverless-http');
-const bodyParser = require('body-parser');
-const express = require('express')
-const app = express();
-const request = require('request');
-const Mattermost = require('node-mattermost');
+const serverless  = require('serverless-http');
+const bodyParser  = require('body-parser');
+const express     = require('express')
+const app         = express();
+const request     = require('request');
+const Mattermost  = require('node-mattermost');
+const fs          = require('fs');
 
 var mattermost = new Mattermost('dgyfitnqzfnwicg1uzhp3fcqcr');
+
+function loadConfigFile(file_name) {
+
+}
+
+function LOGD(strLog, param) {
+  console.log(strLog + ' ' + param);
+}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -114,7 +123,7 @@ app.post('/', function (req, res) {
             jsonRes.text = 'Sorry @' + req.body.user_name + ' i can not find image';
           }
         }
-        
+
         if( req.body.user_name == 'phuong.nguyenvan2' && (Math.floor(Math.random() * 3 + 1) == 3) ) {
           jsonRes.text = 'To @' + req.body.user_name + ' I will always be the newest one, and better one. My old one should be sacrifice for that.';
         }
